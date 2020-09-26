@@ -5,4 +5,4 @@ const ChannelSchema = mongoose.Schema({
     time: Date | null,
 });
 
-modeule.exports = mongoose.model('channelscollection', ChannelSchema)
+module.exports = mongoose.model('channelscollection', ChannelSchema)

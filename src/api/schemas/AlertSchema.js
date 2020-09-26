@@ -9,4 +9,4 @@ const AlertSchema = mongoose.Schema({
     position: String | null,
 });
 
-modeuile.exports = mongoose.model('alertscollection', AlertSchema)
+module.exports = mongoose.model('alertscollection', AlertSchema)
