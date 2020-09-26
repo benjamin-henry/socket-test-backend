@@ -34,4 +34,4 @@ router.get('/read', (req, res) => {
   res.status(200).json({message: 'API - alert'});
 });
 
-export default router;
+module.exports = router;
