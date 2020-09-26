@@ -1,8 +1,7 @@
-import express from 'express';
-import cors from 'cors';
-
-import middlewares from './middlewares.js';
-import api from './api/api.js';
+const express =require('express');
+const cors = require('cors');
+const middlewares = require('./middlewares.js');
+const api = require('./api/api.js');
 
 const app = express();
 
@@ -17,9 +16,9 @@ app.get('/', (req, res) => {
   });
 });
 
-// app.use('/api/v1', api);
+app.use('/api/v1', api);
 
-// app.use(middlewares.notFound);
-// app.use(middlewares.errorHandler);
+app.use(middlewares.notFound);
+app.use(middlewares.errorHandler);
 
-export default app;
+module.exports = app;

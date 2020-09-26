@@ -1,4 +1,4 @@
-import mongoose from 'mongoose'
+const mongoose = require('mongoose')
 
 const AlertSchema = mongoose.Schema({
     // channel: String,
@@ -9,4 +9,4 @@ const AlertSchema = mongoose.Schema({
     position: String | null,
 });
 
-export default mongoose.model('alertscollection', AlertSchema)
+modeuile.exports = mongoose.model('alertscollection', AlertSchema)

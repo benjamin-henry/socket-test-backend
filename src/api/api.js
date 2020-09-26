@@ -1,9 +1,9 @@
-import express from 'express';
-import alert from './alert.js';
+const express = require('express');
+const alert = require('./alert.js');
 // import channel from './channel.js';
 
 const  router = express.Router();
 // router.use('/channel', channel)
 router.use('/alert', alert);
 
-export default router;
+module.exports = router;

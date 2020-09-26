@@ -1,7 +1,7 @@
-import express from 'express';
-import mongoose from 'mongoose';
-import generate_mongo_url from './utils/generate_mongo_url.js'
-import Channel from './schemas/ChannelSchema.js';
+const express = require('express');
+const mongoose = require('mongoose');
+const generate_mongo_url = require('./utils/generate_mongo_url.js')
+const Channel = require('./schemas/ChannelSchema.js');
 
 const router = express.Router();
 

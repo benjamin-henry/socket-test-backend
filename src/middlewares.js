@@ -15,7 +15,7 @@ function errorHandler(err, req, res, next) {
   });
 }
 
-export default {
+module.exports = {
   notFound,
   errorHandler
 };

@@ -1,8 +1,8 @@
-import express from 'express';
-import mongoose from 'mongoose';
-import generate_mongo_url from './utils/generate_mongo_url.js'
-import Alert from './schemas/AlertSchema.js';
-import {v4} from 'uuid'
+const express = require('express');
+const mongoose = require('mongoose');
+const generate_mongo_url = require('./utils/generate_mongo_url.js')
+const Alert = require('./schemas/AlertSchema.js');
+const {v4:uuidV4} = require('uuid')
 
 const connection_url = generate_mongo_url("alertpusherdb")
 
@@ -19,7 +19,7 @@ mongoose.connect(
 const router = express.Router();
 router.post('/create', (req, res) => {
   const newAlert = req.body;
-  newAlert.uid = v4()
+  newAlert.uid = uuidV4()
   Alert.create(newAlert, (err, data) => {
     if(err) {
       res.status(500).send(err)

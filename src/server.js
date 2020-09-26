@@ -1,10 +1,10 @@
-import app from './app.js';
+const app =require('./app.js');
 
 require('dotenv').config();
 
-const port = process.env.PORT || 5000;
+const port = process.env.PORT || 8080;
 app.listen(port, () => {
   /* eslint-disable no-console */
-  console.log(`Listening: http://localhost:${port}`);
+  console.log(`Listening on port${port}`);
   /* eslint-enable no-console */
 });
